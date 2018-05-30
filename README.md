@@ -3,7 +3,7 @@
 ### confluence容器配置
 #### 启动容器
 ```
-docker run --name  confluence -d -p 8090:8090 -p 8091:8091 daocloud.io/marcus_li/docker-confluence:latest
+docker run --name  confluence -d -p 8090:8090 -p 8091:8091 daocloud.io/marcus_li/confluence:latest
 ```
 记录Service ID
 
