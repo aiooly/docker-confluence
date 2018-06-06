@@ -22,6 +22,7 @@ RUN set -x \
     && chmod -R 700            "${CONF_INSTALL}/temp" \
     && chmod -R 700            "${CONF_INSTALL}/logs" \
     && chmod -R 700            "${CONF_INSTALL}/work" \
+    && chown -R daemon:daemon  "${CONF_INSTALL}/confluence" \
     && chown -R daemon:daemon  "${CONF_INSTALL}/conf" \
     && chown -R daemon:daemon  "${CONF_INSTALL}/temp" \
     && chown -R daemon:daemon  "${CONF_INSTALL}/logs" \
