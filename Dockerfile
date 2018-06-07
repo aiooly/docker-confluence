@@ -8,6 +8,13 @@ ENV CONF_VERSION  6.7.2
 ENV JAVA_CACERTS  $JAVA_HOME/jre/lib/security/cacerts
 ENV CERTIFICATE   $CONF_HOME/certificate
 
+
+RUN  echo 'http://mirrors.ustc.edu.cn/alpine/v3.5/main' > /etc/apk/repositories \
+    && echo 'http://mirrors.ustc.edu.cn/alpine/v3.5/community' >>/etc/apk/repositories \
+&& apk update && apk add tzdata \
+&& ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \ 
+&& echo "Asia/Shanghai" > /etc/timezone
+
 # Install Atlassian Confluence and helper tools and setup initial home
 # directory structure.
 RUN set -x \
